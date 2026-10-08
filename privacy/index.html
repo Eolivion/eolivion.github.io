@@ -14,7 +14,7 @@
 <h1>Privacy Policy</h1>
 <p class="meta">Last updated: October 7, 2026</p>
 
-<p>This policy covers the apps Eolivion builds for Atlassian Cloud, starting with <strong>Issues by Team for Jira Dashboards</strong> ("the app").</p>
+<p>This policy covers the apps Eolivion builds for Atlassian Cloud: <strong>Issues by Team for Jira Dashboards</strong> and <strong>Planning Poker for Jira</strong>. The sections below about "the app" describe Issues by Team; Planning Poker has its own section, because it stores a little more.</p>
 
 <h2>The short version</h2>
 <p>The app reads your Jira data to draw a chart, inside Atlassian's own infrastructure, with your own permissions. Eolivion doesn't receive, store or sell any of it. There are no Eolivion servers involved.</p>
@@ -42,6 +42,24 @@
 
 <h2>Where the app runs</h2>
 <p>The app is built on Atlassian Forge and runs entirely on Atlassian's platform. It makes <strong>no requests to any server outside Atlassian</strong>. Your data stays where your Jira data already is, under Atlassian's hosting, data residency and security commitments.</p>
+
+<h2>Planning Poker for Jira</h2>
+<p>Planning Poker runs entirely on Atlassian's platform too, makes no requests outside Atlassian, and Eolivion can't see its data. Unlike Issues by Team, it keeps some data so a session works for everyone in it.</p>
+<div class="table">
+<table>
+<thead><tr><th>What</th><th>Why</th><th>Until</th></tr></thead>
+<tbody>
+<tr><td>The session: name, deck, settings, and the key, summary and type of each issue in it</td><td>so everyone sees the same table</td><td>someone deletes the session</td></tr>
+<tr><td>Each vote and its optional written reason, tied to the voter's Atlassian account ID</td><td>to reveal the cards and work out the result</td><td>the session is deleted</td></tr>
+<tr><td>Who runs the session and who created it (account ID)</td><td>so only they can reveal, save and delete</td><td>the session is deleted</td></tr>
+<tr><td>Who has the session open right now (account ID and time)</td><td>to show who's present</td><td>refreshed every few seconds; gone when they leave</td></tr>
+<tr><td>Which column an issue was put in during relative sizing, and who moved it</td><td>for the shared board</td><td>the session is deleted</td></tr>
+</tbody>
+</table>
+</div>
+<p>All of this lives in Atlassian Forge storage, on Atlassian's infrastructure. The app shows names and avatars by asking Jira at the moment they're needed; it doesn't store them.</p>
+<p>When someone saves an estimate, the app writes it to the Jira field picked for the session. If that field isn't on the issue's edit screen, the app writes it as itself, but only after checking that the person saving is allowed to edit that issue.</p>
+<p>Once a week the app asks Atlassian which of the account IDs it holds belong to closed accounts, and erases their votes, reasons and presence.</p>
 
 <h2>What Eolivion receives</h2>
 <p>When the app is installed, Atlassian shares licensing and contact details about the customer who installs the app (for example, the site name and a billing or technical contact). Eolivion uses these only to manage the license and to answer support requests.</p>
