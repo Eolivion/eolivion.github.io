@@ -12,9 +12,9 @@
 <p class="brand"><a href="../"><img src="../eolivion-logo.svg" alt="" width="28" height="28"> Eolivion</a></p>
 
 <h1>Privacy Policy</h1>
-<p class="meta">Last updated: October 10, 2026</p>
+<p class="meta">Last updated: October 13, 2026</p>
 
-<p>This policy covers the apps Eolivion builds for Atlassian Cloud: <strong>Issues by Team for Jira Dashboards</strong> and <strong>Scrum Poker for Jira (and its free edition, Scrum Poker Free)</strong>. The sections below about "the app" describe Issues by Team; Scrum Poker has its own section, because it stores a little more.</p>
+<p>This policy covers the apps Eolivion builds for Atlassian Cloud: <strong>Issues by Team for Jira Dashboards</strong>, <strong>Scrum Poker for Jira (and its free edition, Scrum Poker Free)</strong> and <strong>Scrum Retro for Jira (and its free edition, Scrum Retro Free)</strong>. The sections below about "the app" describe Issues by Team; Scrum Poker and Scrum Retro have their own sections, because they store a little more.</p>
 
 <h2>The short version</h2>
 <p>The app reads your Jira data to draw a chart, inside Atlassian's own infrastructure, with your own permissions. Eolivion doesn't receive, store or sell any of it. There are no Eolivion servers involved.</p>
@@ -60,6 +60,25 @@
 <p>All of this lives in Atlassian Forge storage, on Atlassian's infrastructure. The app shows names and avatars by asking Jira at the moment they're needed; it doesn't store them.</p>
 <p>When someone saves an estimate, the app writes it to the Jira field picked for the session. If that field isn't on the issue's edit screen, the app writes it as itself, but only after checking that the person saving is allowed to edit that issue.</p>
 <p>Once a week the app asks Atlassian which of the account IDs it holds belong to closed accounts, and erases their votes, reasons and presence.</p>
+
+<h2>Scrum Retro for Jira</h2>
+<p>Scrum Retro runs entirely on Atlassian's platform too, makes no requests outside Atlassian, and Eolivion can't see its data. It keeps what a retrospective needs so everyone in it sees the same board.</p>
+<div class="table">
+<table>
+<thead><tr><th>What</th><th>Why</th><th>Until</th></tr></thead>
+<tbody>
+<tr><td>The retro: name, format, columns, settings, the sprint it's about, and its action items (with the Jira issue each one became)</td><td>so everyone sees the same board, and the next retro can bring back open action items</td><td>someone deletes the retro</td></tr>
+<tr><td>Each card's text and column, tied to the author's Atlassian account ID</td><td>so only the author can edit or delete it. In an anonymous retro, the author is never shown to anyone else</td><td>the retro is deleted</td></tr>
+<tr><td>Each vote, tied to the voter's account ID</td><td>to limit votes per person and count them</td><td>the retro is deleted</td></tr>
+<tr><td>Each person's answer to the mood check (1 to 5), tied to their account ID</td><td>so they can change it; only the average is shown</td><td>the retro is deleted</td></tr>
+<tr><td>Who runs the retro and who created it (account ID)</td><td>so only they can move it forward and delete it</td><td>the retro is deleted</td></tr>
+<tr><td>Who has the retro open right now (account ID and time)</td><td>to show who's present</td><td>refreshed every few seconds; gone when they leave</td></tr>
+</tbody>
+</table>
+</div>
+<p>All of this lives in Atlassian Forge storage, on Atlassian's infrastructure. Names and avatars are asked from Jira when they're needed and not stored.</p>
+<p>When someone turns an action item into a Jira issue, the app creates it in the project as that person, with their permissions.</p>
+<p>Once a week the app asks Atlassian which of the account IDs it holds belong to closed accounts. It erases their votes, mood answers and presence, and removes them as the author of their cards (the card text stays with the team).</p>
 
 <h2>What Eolivion receives</h2>
 <p>When the app is installed, Atlassian shares licensing and contact details about the customer who installs the app (for example, the site name and a billing or technical contact). Eolivion uses these only to manage the license and to answer support requests.</p>
