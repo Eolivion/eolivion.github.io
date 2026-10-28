@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Security Policy · Eolivion</title>
+<link rel="icon" href="../eolivion-logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main>
+<p class="brand"><a href="../"><img src="../eolivion-logo.svg" alt="" width="28" height="28"> Eolivion</a></p>
+
+<h1>Security Policy</h1>
+<p class="meta">Last updated: October 28, 2026</p>
+
+<p>This policy covers the apps Eolivion builds for Atlassian Cloud: <strong>Issues by Team for Jira Dashboards</strong>, <strong>Scrum Poker by Eolivion</strong> and <strong>Scrum Retro by Eolivion</strong>, including their free editions. What each app stores is described in the <a href="../privacy/">Privacy Policy</a>; this page is about how that data is protected.</p>
+
+<h2>The short version</h2>
+<p>The apps run entirely on Atlassian Forge. There are no Eolivion servers, no remote backend and no requests to any host outside Atlassian. Your data stays inside Atlassian's infrastructure, under Atlassian's own security, hosting and data residency commitments.</p>
+
+<h2>Where the apps run</h2>
+<ul>
+<li>Every app is built on Atlassian Forge and qualifies for Atlassian's Runs on Atlassian program.</li>
+<li>The apps declare no external fetch permissions, so the platform itself blocks any connection to a host outside Atlassian.</li>
+<li>The apps have no secrets, API keys or tokens to store or rotate.</li>
+<li>The apps never ask for Atlassian passwords or credentials for any other service.</li>
+</ul>
+
+<h2>How data is protected</h2>
+<ul>
+<li><strong>In transit:</strong> every request goes between the browser, Jira and Forge over Atlassian's encrypted connections (TLS).</li>
+<li><strong>At rest:</strong> what the apps keep lives in Atlassian Forge storage, which Atlassian encrypts at rest.</li>
+<li><strong>Isolation:</strong> each Jira site's data is kept apart by the Forge platform. One site's app can't read another site's data.</li>
+<li><strong>Access:</strong> Eolivion has no access to customer data. There's no admin console or database on Eolivion's side to look into.</li>
+</ul>
+
+<h2>Permissions</h2>
+<ul>
+<li>The apps ask only for the Jira scopes they need, listed on each Marketplace listing.</li>
+<li>Requests to Jira run as the person using the app, with that person's own permissions. The app can't show anyone something they couldn't already see in Jira.</li>
+<li>Scrum Poker has one exception: it can save an estimate to a field that isn't on the issue's edit screen. Before that, it checks that the person saving is allowed to edit that issue, and stops if they aren't.</li>
+</ul>
+
+<h2>Secure development</h2>
+<ul>
+<li>Text people type is escaped before it's shown, and limited in length on the server side. Forge's content security policy blocks inline scripts.</li>
+<li>Dependencies are checked for known vulnerabilities (npm audit) on every build, and a production release ships with no known vulnerabilities in them.</li>
+<li>Automated tests run before every release, and every production deploy is reviewed and run by hand.</li>
+<li>Logs hold only technical details (which function ran, the HTTP status and Jira's error message). No personal data, issue content or tokens are logged.</li>
+<li>The accounts used to build and publish the apps (Atlassian, source control, email) are protected with multi-factor authentication, and the development machine uses full disk encryption and up-to-date antivirus.</li>
+</ul>
+
+<h2>Personal data</h2>
+<ul>
+<li>The apps store Atlassian account IDs only where a feature needs them, never names or email addresses. Names and avatars are asked from Jira when they're shown.</li>
+<li>Once a week, each app asks Atlassian which stored account IDs belong to closed accounts, and erases their data.</li>
+</ul>
+
+<h2>Reporting a vulnerability</h2>
+<p>If you find a security issue, write to <a href="mailto:security@eolivion.com">security@eolivion.com</a> or open a request on the <a href="https://eolivion.atlassian.net/servicedesk/customer/portal/1">support portal</a>. Please include the app, the steps to reproduce it and what you think the impact is. Security reports are handled ahead of everything else, and you'll get a reply within 2 business days.</p>
+<p>Fixes follow the <a href="https://developer.atlassian.com/platform/marketplace/security-bugfix-policy/">Atlassian Marketplace security bug fix policy</a>, counted from the report:</p>
+<div class="table">
+<table>
+<thead><tr><th>Severity</th><th>Fixed within</th></tr></thead>
+<tbody>
+<tr><td>Critical</td><td>10 days</td></tr>
+<tr><td>High</td><td>4 weeks</td></tr>
+<tr><td>Medium</td><td>12 weeks</td></tr>
+<tr><td>Low</td><td>25 weeks</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>If something goes wrong</h2>
+<p>If a security incident affects an app, Eolivion contains it first (by shipping a fix or disabling the affected feature), tells Atlassian within 24 hours as the Marketplace's incident guidelines require, and lets affected customers know what happened, what data was involved and what to do.</p>
+
+<h2>What Eolivion doesn't have</h2>
+<p>To be clear about it: Eolivion is a one-person company. It has no security certifications (such as SOC 2 or ISO 27001), hasn't had a third-party penetration test, and doesn't run a bug bounty program. The apps rely on Atlassian's platform for hosting, encryption and isolation, which is covered by Atlassian's own certifications.</p>
+
+<h2>Contact</h2>
+<p>Eolivion · Erik Carvalho Gomes de Oliveira · São Paulo, SP, Brazil<br>
+Security: <a href="mailto:security@eolivion.com">security@eolivion.com</a> · Support portal: <a href="https://eolivion.atlassian.net/servicedesk/customer/portal/1">eolivion.atlassian.net/servicedesk/customer/portal/1</a></p>
+</main>
+</body>
+</html>
