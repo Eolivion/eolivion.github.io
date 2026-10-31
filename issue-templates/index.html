@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Issue and Work Item Templates by Eolivion · Getting started</title>
+<link rel="icon" href="../eolivion-logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main>
+<p class="brand"><a href="../"><img src="../eolivion-logo.svg" alt="" width="28" height="28"> Eolivion</a></p>
+
+<h1>Issue and Work Item Templates by Eolivion</h1>
+<p class="meta">Getting started</p>
+
+<p>Issue and Work Item Templates by Eolivion fills in a work item from a template and creates its subtasks and child work items, in the order you set, with the links between them. It runs inside Jira and makes no calls to outside servers.</p>
+
+<h2>Set it up (Jira admin)</h2>
+<ol>
+<li>Go to <strong>Settings &gt; Apps &gt; Issue and Work Item Templates</strong>.</li>
+<li>Under <strong>The Template field</strong>, tick the projects that should use templates and choose <strong>Create the Template field</strong>. The app creates a field called <em>Template</em> and adds it to those projects' create screens.</li>
+<li>Choose <strong>New template</strong>, or open a work item that's already set up the way you like and save it as a template (see below).</li>
+</ol>
+<p>Team-managed projects don't share screens, so the app can't add the field there. People in those projects use <strong>Apply or save a template</strong> from the work item's ••• menu instead.</p>
+
+<h2>What a template holds</h2>
+<ul>
+<li><strong>The work item itself:</strong> a description, labels and a priority. If someone already wrote a description, the template's goes below it. Labels are added, and the priority is only set if nobody picked one.</li>
+<li><strong>Items to create, in order:</strong> subtasks, and child work items for parents that can hold them, like an epic. Each one can have its own description, labels and priority.</li>
+<li><strong>Links between items:</strong> for example, "Kickoff call blocks Set up access".</li>
+<li><strong>Where it applies:</strong> the work types and projects that can use it. None ticked means all of them.</li>
+</ul>
+<p>In the description, "## " makes a heading, "- " a list and "[ ] " a checkbox the team can tick off in Jira.</p>
+
+<h2>Use a template</h2>
+<p><strong>When you create a work item:</strong> pick the template in the <strong>Template</strong> field and create it. A few seconds later the work item is filled in and its items are created under it.</p>
+<p>The Template field only shows in the create window's <strong>full view</strong>. If your create window opens small, choose <strong>••• &gt; Full view</strong> once; Jira remembers it.</p>
+<p><strong>On a work item that already exists:</strong> open it, choose <strong>••• &gt; Apply or save a template</strong>, pick the template and choose <strong>Apply</strong>.</p>
+<p>It also works when a work item is created by an automation rule or another tool, as long as the Template field is set.</p>
+
+<h2>Save a work item as a template</h2>
+<p>Open a work item, choose <strong>••• &gt; Apply or save a template</strong> and then <strong>Save this work item as a template</strong>. The app copies its description, labels, subtasks and child work items in their current order, and the links between them. Change anything before saving.</p>
+<p>Jira admins can manage every template. Project admins can save and change templates that apply only to their own projects.</p>
+
+<h2>Order and reliability</h2>
+<p>Items are created one at a time, in the order of the template, each one already under its parent. If Jira asks the app to slow down, it waits and tries again instead of skipping the item. When it's done, the work item shows the result, for example "Release epic applied: 60 of 60 created", or which items failed and why.</p>
+
+<h2>Permissions and data</h2>
+<p>The app creates and edits work items itself, and sets the person who created the work item as the reporter of the new items. Before applying a template from the menu, it checks that the person can edit the work item and create work items in the project. Templates and the result of each run are kept in Atlassian's own storage for the app; see the <a href="../privacy/">privacy policy</a> for exactly what's kept.</p>
+
+<h2>Need help?</h2>
+<p>Open a request on the <a href="https://eolivion.atlassian.net/servicedesk/customer/portal/1">support portal</a> or write to <a href="mailto:support@eolivion.com">support@eolivion.com</a>.</p>
+</main>
+</body>
+</html>

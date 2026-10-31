@@ -12,9 +12,9 @@
 <p class="brand"><a href="../"><img src="../eolivion-logo.svg" alt="" width="28" height="28"> Eolivion</a></p>
 
 <h1>Privacy Policy</h1>
-<p class="meta">Last updated: October 28, 2026</p>
+<p class="meta">Last updated: October 30, 2026</p>
 
-<p>This policy covers the apps Eolivion builds for Atlassian Cloud: <strong>Issues by Team for Jira Dashboards</strong>, <strong>Scrum Poker by Eolivion (and its free edition, Scrum Poker Free by Eolivion)</strong> and <strong>Scrum Retro by Eolivion (and its free edition, Scrum Retro Free by Eolivion)</strong>. The sections below about "the app" describe Issues by Team; Scrum Poker and Scrum Retro have their own sections, because they store a little more.</p>
+<p>This policy covers the apps Eolivion builds for Atlassian Cloud: <strong>Issues by Team for Jira Dashboards</strong>, <strong>Scrum Poker by Eolivion (and its free edition, Scrum Poker Free by Eolivion)</strong>, <strong>Scrum Retro by Eolivion (and its free edition, Scrum Retro Free by Eolivion)</strong> and <strong>Issue and Work Item Templates by Eolivion</strong>. The sections below about "the app" describe Issues by Team; Scrum Poker, Scrum Retro and Issue and Work Item Templates have their own sections, because they store a little more.</p>
 
 <h2>The short version</h2>
 <p>The app reads your Jira data to draw a chart, inside Atlassian's own infrastructure, with your own permissions. Eolivion doesn't receive, store or sell any of it. There are no Eolivion servers involved.</p>
@@ -81,6 +81,23 @@
 <p>All of this lives in Atlassian Forge storage, on Atlassian's infrastructure. Names and avatars are asked from Jira when they're needed and not stored.</p>
 <p>When someone turns an action item into a Jira issue, the app creates it in the project as that person, with their permissions.</p>
 <p>Once a week the app asks Atlassian which of the account IDs it holds belong to closed accounts. It erases their votes, mood answers and presence, and removes them as the author of their cards (the card text stays with the team).</p>
+
+<h2>Issue and Work Item Templates by Eolivion</h2>
+<p>Issue and Work Item Templates runs entirely on Atlassian's platform too, makes no requests outside Atlassian, and Eolivion can't see its data. It keeps the templates and the result of each time one is applied.</p>
+<div class="table">
+<table>
+<thead><tr><th>What</th><th>Why</th><th>Until</th></tr></thead>
+<tbody>
+<tr><td>Each template: name, the work types and projects it applies to, description, labels, priority, and the items and links it creates</td><td>to apply it to work items</td><td>a Jira admin deletes the template</td></tr>
+<tr><td>Who last changed each template, and a default assignee if someone set one (account ID)</td><td>to show who changed it and to assign the items it creates</td><td>the template is deleted</td></tr>
+<tr><td>The result of each time a template was applied: the template, the keys of the items created and any errors</td><td>to show progress and problems on the work item</td><td>the app is uninstalled</td></tr>
+<tr><td>The ID of the "Template" field the app creates in Jira, and which option belongs to which template</td><td>to know which template someone picked</td><td>the app is uninstalled</td></tr>
+</tbody>
+</table>
+</div>
+<p>All of this lives in Atlassian Forge storage, on Atlassian's infrastructure. The work items, subtasks and links a template creates are regular Jira data and stay in Jira.</p>
+<p>When a template is applied, the app creates and edits the work items itself and sets the person who created the work item as the reporter of the new items. Before applying from the work item's menu, it checks that the person can edit that work item and create work items in the project.</p>
+<p>Once a week the app asks Atlassian which of the account IDs it holds belong to closed accounts, and removes them from the templates.</p>
 
 <h2>What Eolivion receives</h2>
 <p>When the app is installed, Atlassian shares licensing and contact details about the customer who installs the app (for example, the site name and a billing or technical contact). Eolivion uses these only to manage the license and to answer support requests.</p>
