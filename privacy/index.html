@@ -12,9 +12,9 @@
 <p class="brand"><a href="../"><img src="../eolivion-logo.svg" alt="" width="28" height="28"> Eolivion</a></p>
 
 <h1>Privacy Policy</h1>
-<p class="meta">Last updated: October 30, 2026</p>
+<p class="meta">Last updated: October 31, 2026</p>
 
-<p>This policy covers the apps Eolivion builds for Atlassian Cloud: <strong>Issues by Team for Jira Dashboards</strong>, <strong>Scrum Poker by Eolivion (and its free edition, Scrum Poker Free by Eolivion)</strong>, <strong>Scrum Retro by Eolivion (and its free edition, Scrum Retro Free by Eolivion)</strong> and <strong>Issue and Work Item Templates by Eolivion</strong>. The sections below about "the app" describe Issues by Team; Scrum Poker, Scrum Retro and Issue and Work Item Templates have their own sections, because they store a little more.</p>
+<p>This policy covers the apps Eolivion builds for Atlassian Cloud: <strong>Issues by Team for Jira Dashboards</strong>, <strong>Scrum Poker by Eolivion (and its free edition, Scrum Poker Free by Eolivion)</strong>, <strong>Scrum Retro by Eolivion (and its free edition, Scrum Retro Free by Eolivion)</strong>, <strong>Issue and Work Item Templates by Eolivion</strong> and <strong>Time in Status, Cycle Time and Lead Time by Eolivion</strong>. The sections below about "the app" describe Issues by Team; Scrum Poker, Scrum Retro, Issue and Work Item Templates and Time in Status have their own sections, because they store a little more.</p>
 
 <h2>The short version</h2>
 <p>The app reads your Jira data to draw a chart, inside Atlassian's own infrastructure, with your own permissions. Eolivion doesn't receive, store or sell any of it. There are no Eolivion servers involved.</p>
@@ -98,6 +98,20 @@
 <p>All of this lives in Atlassian Forge storage, on Atlassian's infrastructure. The work items, subtasks and links a template creates are regular Jira data and stay in Jira.</p>
 <p>When a template is applied, the app creates and edits the work items itself and sets the person who created the work item as the reporter of the new items. Before applying from the work item's menu, it checks that the person can edit that work item and create work items in the project.</p>
 <p>Once a week the app asks Atlassian which of the account IDs it holds belong to closed accounts, and removes them from the templates.</p>
+
+<h2>Time in Status, Cycle Time and Lead Time by Eolivion</h2>
+<p>Time in Status runs entirely on Atlassian's platform too, makes no requests outside Atlassian, and Eolivion can't see its data. It reads work items and their status history when someone runs a report, with that person's own Jira permissions, and doesn't keep the results.</p>
+<div class="table">
+<table>
+<thead><tr><th>What</th><th>Why</th><th>Until</th></tr></thead>
+<tbody>
+<tr><td>The working calendar: time zone, working hours for each day and holidays</td><td>to count working hours only</td><td>a Jira admin changes it, or the app is uninstalled</td></tr>
+<tr><td>Saved reports: name, JQL, start and end statuses, grouping and whether to count working hours</td><td>so the report can be run again</td><td>someone deletes the report, or the app is uninstalled</td></tr>
+<tr><td>SLA goals for each project: name, statuses, target time, priorities and work types</td><td>to show whether work items meet them</td><td>a project admin removes the goal, or the app is uninstalled</td></tr>
+</tbody>
+</table>
+</div>
+<p>All of this lives in Atlassian Forge storage, on Atlassian's infrastructure. None of it identifies a person. The report results, including work item keys, summaries and assignee names, are calculated in the browser of the person running the report and aren't stored anywhere. The dashboard gadget keeps its last summary (counts and times, no work item details) in that person's browser for up to an hour.</p>
 
 <h2>What Eolivion receives</h2>
 <p>When the app is installed, Atlassian shares licensing and contact details about the customer who installs the app (for example, the site name and a billing or technical contact). Eolivion uses these only to manage the license and to answer support requests.</p>

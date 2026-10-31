@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Time in Status, Cycle Time and Lead Time by Eolivion · Getting started</title>
+<link rel="icon" href="../eolivion-logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main>
+<p class="brand"><a href="../"><img src="../eolivion-logo.svg" alt="" width="28" height="28"> Eolivion</a></p>
+
+<h1>Time in Status, Cycle Time and Lead Time by Eolivion</h1>
+<p class="meta">Getting started</p>
+
+<p>Time in Status, Cycle Time and Lead Time by Eolivion shows how long work items spend in each status, their cycle time and lead time, and whether they meet your SLA goals. Every time it shows can be opened to see the status changes behind it. It runs inside Jira and makes no calls to outside servers.</p>
+
+<h2>Set the working calendar (Jira admin)</h2>
+<ol>
+<li>Go to <strong>Settings &gt; Apps &gt; Time in Status, Cycle Time and Lead Time</strong>.</li>
+<li>Choose <strong>Working hours</strong>, check the time zone and write the hours for each day, like <em>09:00-12:00, 13:00-18:00</em> for a lunch break. Leave a day empty if nobody works on it.</li>
+<li>Add holidays, one per line, as YYYY-MM-DD, and choose <strong>Save calendar</strong>.</li>
+</ol>
+<p>Without a calendar, every hour counts. Reports, SLA goals and the gadget can each count working hours only or every hour.</p>
+
+<h2>Run a report</h2>
+<ol>
+<li>Open a project and choose <strong>Time in Status</strong> in its navigation.</li>
+<li>Write the JQL for the work items you want, or keep the one for the whole project. A report reads up to 10,000 work items.</li>
+<li>Choose <strong>Run report</strong>. You'll see the time in each status with the average, median and 85th percentile, and a table with every work item.</li>
+</ol>
+<p>Anyone running a report only sees the work items they can open in Jira.</p>
+
+<h2>Check any number</h2>
+<p>Click a time in the work item table to see when the work item entered and left that status, the clock time, and what the working calendar counted. That's how you can tell whether a weekend or a holiday was left out.</p>
+
+<h2>Cycle time and lead time</h2>
+<p>Open <strong>Cycle time and lead time</strong> and tick where the time starts and where it ends. It counts from the first time a work item enters a start status until it first enters an end status after that. For lead time, start at your first status. The report then shows the median, the 85th percentile, a scatter chart of finished work items and how the times are spread.</p>
+
+<h2>Group, sort and save</h2>
+<p>Group by work type, priority, assignee, sprint or the month the work item was resolved. Click a column to sort by it, and Shift + click another column to sort by both. Give the report a name and choose <strong>Save report</strong> so anyone in the project can run it again.</p>
+<p><strong>CSV with entry and exit times</strong> gives every status a work item passed through, with the date and time it entered and left.</p>
+
+<h2>SLA goals (project admins)</h2>
+<p>Choose <strong>SLA goals</strong> in the report and add a goal:</p>
+<ul>
+<li><strong>Time in status:</strong> the most time a work item should spend in one status, or in several added up.</li>
+<li><strong>From one status to another:</strong> the most time between entering a start status and entering an end status.</li>
+</ul>
+<p>A goal can count working hours only and apply to some priorities or work types. Work items turn amber when they reach 80% of the goal and red when they go over it, in the report, in the work item panel and in the gadget.</p>
+
+<h2>On each work item</h2>
+<p>Open a work item and find <strong>Time in Status</strong> under Apps. It shows the time in each status, the project's SLA goals for that work item, and every status change.</p>
+
+<h2>On a dashboard</h2>
+<p>Add the <strong>Time in Status and SLA</strong> gadget to a dashboard. In its settings, write the project key (for its statuses and SLA goals), the JQL and, if you want, where cycle time starts and ends. The gadget keeps its last result in your browser for an hour so the dashboard opens quickly, and <strong>Update</strong> recalculates it.</p>
+
+<h2>Need help?</h2>
+<p>Open a request on the <a href="https://eolivion.atlassian.net/servicedesk/customer/portal/1">support portal</a> or write to <a href="mailto:support@eolivion.com">support@eolivion.com</a>.</p>
+</main>
+</body>
+</html>
