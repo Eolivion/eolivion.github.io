@@ -46,6 +46,10 @@
 <h2>Order and reliability</h2>
 <p>Items are created one at a time, in the order of the template, each one already under its parent. If Jira asks the app to slow down, it waits and tries again instead of skipping the item. When it's done, the work item shows the result, for example "Release epic applied: 60 of 60 created", or which items failed and why.</p>
 
+<h2>Automation rules and usage</h2>
+<p>The app creates the items itself, not through an automation rule, so applying a template doesn't use any of your Jira automation usage.</p>
+<p>Your own rules still see the new items like any other work item. If you have a rule that runs when a work item is created, it also runs for each item the template creates, and those runs count toward your usage as usual. A template with 60 items means 60 more runs of that rule. The app shows up as the initiator of those runs, so if you only want the rule for work items people create, add a condition on the initiator.</p>
+
 <h2>Permissions and data</h2>
 <p>The app creates and edits work items itself, and sets the person who created the work item as the reporter of the new items. Before applying a template from the menu, it checks that the person can edit the work item and create work items in the project. Templates and the result of each run are kept in Atlassian's own storage for the app; see the <a href="../privacy/">privacy policy</a> for exactly what's kept.</p>
 
