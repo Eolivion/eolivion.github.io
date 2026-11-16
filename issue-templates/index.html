@@ -14,7 +14,7 @@
 <h1>Issue and Work Item Templates by Eolivion</h1>
 <p class="meta">Getting started</p>
 
-<p>Issue and Work Item Templates by Eolivion fills in a work item from a template and creates its subtasks and child work items, in the order you set, with the links between them. It runs inside Jira and makes no calls to outside servers.</p>
+<p>Issue and Work Item Templates by Eolivion fills in a work item from a template and creates its subtasks and child work items, in the order you set, with the links between them. It can assign each item from a people field, and create a work item from a template on a schedule. It runs inside Jira and makes no calls to outside servers.</p>
 
 <h2>Set it up (Jira admin)</h2>
 <ol>
@@ -27,7 +27,7 @@
 <h2>What a template holds</h2>
 <ul>
 <li><strong>The work item itself:</strong> a description, labels and a priority. If someone already wrote a description, the template's goes below it. Labels are added, and the priority is only set if nobody picked one.</li>
-<li><strong>Items to create, in order:</strong> subtasks, and child work items for parents that can hold them, like an epic. Each one can have its own description, labels and priority.</li>
+<li><strong>Items to create, in order:</strong> subtasks, and child work items for parents that can hold them, like an epic. Each one can have its own description, labels, priority and assignee.</li>
 <li><strong>Links between items:</strong> for example, "Kickoff call blocks Set up access".</li>
 <li><strong>Where it applies:</strong> the work types and projects that can use it. None ticked means all of them.</li>
 </ul>
@@ -43,15 +43,39 @@
 <p>Open a work item, choose <strong>••• &gt; Apply or save a template</strong> and then <strong>Save this work item as a template</strong>. The app copies its description, labels, subtasks and child work items in their current order, and the links between them. Change anything before saving.</p>
 <p>Jira admins can manage every template. Project admins can save and change templates that apply only to their own projects.</p>
 
+<h2>Who gets each item</h2>
+<p>Each item in a template has an <strong>Assignee</strong>:</p>
+<ul>
+<li><strong>Unassigned</strong>.</li>
+<li><strong>Whoever created the work item</strong>.</li>
+<li><strong>The work item's assignee</strong>.</li>
+<li><strong>From a people field:</strong> the person in a field of the work item, like "QA owner".</li>
+<li><strong>One copy per person in a people field:</strong> the item is created once for each person in the field, each copy assigned to that person and named after them, like "Review: Ana" and "Review: Bruno". Copies go in alphabetical order, up to 50 per item.</li>
+</ul>
+<p>For the last two, you pick the field from a list. Team-managed projects have their own fields, so the list shows which project each one belongs to. When a template is used in another project, the app looks for a field with the same name there, and if there isn't one, the work item says so.</p>
+<p>When the field is empty, the item is created unassigned or not created at all; you choose which for each item. When someone in the field can't be assigned work items in that project, their item is still created, unassigned. Apps in the field are left out. The work item lists every one of these cases when the template is done, so nobody has to guess why an item is missing.</p>
+
+<h2>Create on a schedule (Jira admin)</h2>
+<p>For work that comes back every week or month, like a weekly close or a monthly report, the app can create a work item from a template on a schedule. Each time it's a fresh work item from the template, with its items and links, not a copy of the last one with its old comments and status.</p>
+<ol>
+<li>Go to <strong>Settings &gt; Apps &gt; Issue and Work Item Templates</strong> and, under <strong>Scheduled</strong>, choose <strong>Schedule a template</strong>.</li>
+<li>Pick the template, the project and the work type, and write the summary. Tick <strong>Add the date</strong> to get summaries like "Weekly close, Nov 3".</li>
+<li>Choose when: every weekday, on some days of the week, or once a month on a day, the first workday or the last workday. Set the time and the time zone; it follows daylight saving time.</li>
+<li>If you like, set a due date a number of days after it's created, a date for the schedule to end, and who gets it: one person, or people taking turns.</li>
+</ol>
+<p>The work item shows up within five minutes of the time you set. Day 29, 30 or 31 runs on the last day in shorter months.</p>
+<p><strong>Create one now</strong> makes one right away, to check it looks right, without changing when the next one comes. If people take turns, it counts as a turn.</p>
+<p>You'll be the reporter of the work items a schedule creates. If you can't create work items in that project anymore, the schedule pauses instead of creating them for you, and the list says why. It also pauses if the template is deleted or the project loses that work type. To take over someone else's schedule, open it and save it; you become the reporter. If the person whose turn it is can't be assigned work items in the project, that one is created unassigned.</p>
+
 <h2>Order and reliability</h2>
 <p>Items are created one at a time, in the order of the template, each one already under its parent. If Jira asks the app to slow down, it waits and tries again instead of skipping the item. When it's done, the work item shows the result, for example "Release epic applied: 60 of 60 created", or which items failed and why.</p>
 
 <h2>Automation rules and usage</h2>
-<p>The app creates the items itself, not through an automation rule, so applying a template doesn't use any of your Jira automation usage.</p>
+<p>The app creates the items itself, not through an automation rule, so applying a template or running a schedule doesn't use any of your Jira automation usage.</p>
 <p>Your own rules still see the new items like any other work item. If you have a rule that runs when a work item is created, it also runs for each item the template creates, and those runs count toward your usage as usual. A template with 60 items means 60 more runs of that rule. The app shows up as the initiator of those runs, so if you only want the rule for work items people create, add a condition on the initiator.</p>
 
 <h2>Permissions and data</h2>
-<p>The app creates and edits work items itself, and sets the person who created the work item as the reporter of the new items. Before applying a template from the menu, it checks that the person can edit the work item and create work items in the project. Templates and the result of each run are kept in Atlassian's own storage for the app; see the <a href="../privacy/">privacy policy</a> for exactly what's kept.</p>
+<p>The app creates and edits work items itself, and sets the person who created the work item as the reporter of the new items. Work items from a schedule have the person who saved the schedule as their reporter. Before applying a template from the menu, it checks that the person can edit the work item and create work items in the project. Templates and the result of each run are kept in Atlassian's own storage for the app; see the <a href="../privacy/">privacy policy</a> for exactly what's kept.</p>
 
 <h2>Need help?</h2>
 <p>Open a request on the <a href="https://eolivion.atlassian.net/servicedesk/customer/portal/1">support portal</a> or write to <a href="mailto:support@eolivion.com">support@eolivion.com</a>.</p>
