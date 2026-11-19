@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Epic Progress &amp; Hierarchy Tree for Jira Dashboards · Getting started</title>
+<link rel="icon" href="../eolivion-logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main>
+<p class="brand"><a href="../"><img src="../eolivion-logo.svg" alt="" width="28" height="28"> Eolivion</a></p>
+
+<h1>Epic Progress &amp; Hierarchy Tree for Jira Dashboards</h1>
+<p class="meta">Getting started</p>
+
+<p>Epic Progress &amp; Hierarchy Tree is a widget for the new Jira dashboards. It shows your epics, their children and subtasks as a tree you can open right on the dashboard, with a progress bar and totals at every level. It runs inside Jira and makes no calls to outside servers.</p>
+
+<h2>Add the widget</h2>
+<ol>
+<li>Open a dashboard and choose <strong>Edit</strong>, then <strong>Add widget</strong>.</li>
+<li>Search for <strong>Epic Progress</strong> and add <strong>Epic Progress &amp; Hierarchy Tree</strong>.</li>
+<li>Fill in its settings, check the preview beside them and choose <strong>Add</strong>.</li>
+</ol>
+<p>The widget is available on the new Jira dashboards. It isn't offered as a gadget on classic dashboards.</p>
+
+<h2>Choose what goes at the top</h2>
+<p><strong>Top level (JQL)</strong> picks the work items at the top of the tree. The default is every epic that isn't done. Use any field to narrow it, like <em>project = SHOP AND issuetype = Epic AND fixVersion = "Q4"</em>. Their children come along on their own, so you don't need a second query for them.</p>
+<p><strong>Levels</strong> sets how far down the tree goes: two levels, like epics and their stories; three, down to subtasks; or four, when your site has a level above epics.</p>
+
+<h2>Add up a field</h2>
+<p>In <strong>Add up</strong>, choose story points, original estimate, time spent or any other number field. Each level then shows what its children add up to.</p>
+<ul>
+<li>A value set on the parent itself shows in brackets beside the total, like <em>26 (8)</em>, so it isn't counted twice.</li>
+<li>When only some children have a value, the widget says so beside the total, like <em>4 of 5 estimated</em>, so you know what it leaves out.</li>
+<li><strong>Progress by</strong> fills the bars by work items done or by the field done.</li>
+</ul>
+
+<h2>Open the tree</h2>
+<p>Click the arrow beside a work item to open its children right there, or choose <strong>Expand all</strong>. Click a key to open the work item in Jira. Each work item shows once, under its parent.</p>
+<p>The top level shows up to 200 work items. On very large trees, some children load when you open their parent, and the totals grow as they do.</p>
+
+<h2>Dashboard filters</h2>
+<p>When <strong>Use this dashboard's filters on the top level</strong> is on, the dashboard's filter bar narrows the top level: space, status, priority, work type and dates. When a filter can't be applied, the widget names it, so nothing is left out quietly.</p>
+
+<h2>Who sees what</h2>
+<p>The widget reads work items as the person looking at the dashboard. Everyone sees only the work items they can already open in Jira, and the totals count only those.</p>
+
+<h2>Need help?</h2>
+<p>Open a request on the <a href="https://eolivion.atlassian.net/servicedesk/customer/portal/1">support portal</a> or write to <a href="mailto:support@eolivion.com">support@eolivion.com</a>.</p>
+</main>
+</body>
+</html>
