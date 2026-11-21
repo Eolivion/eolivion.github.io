@@ -26,6 +26,7 @@
 
 <h2>Choose what goes at the top</h2>
 <p><strong>Top level (JQL)</strong> picks the work items at the top of the tree. The default is every epic that isn't done. Use any field to narrow it, like <em>project = SHOP AND issuetype = Epic AND fixVersion = "Q4"</em>. Their children come along on their own, so you don't need a second query for them.</p>
+<p><strong>Levels below: only show</strong> is optional. Leave it empty to show every child. Fill it with JQL to keep only some, like <em>sprint in openSprints()</em> for this sprint's stories under this quarter's epics. It applies to every level below the top, so a work item it leaves out hides its children too, and progress and totals count only what's shown.</p>
 <p><strong>Levels</strong> sets how far down the tree goes: two levels, like epics and their stories; three, down to subtasks; or four, when your site has a level above epics.</p>
 
 <h2>Add up a field</h2>

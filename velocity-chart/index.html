@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Velocity Chart &amp; Sprint Report for Jira Dashboards · Getting started</title>
+<link rel="icon" href="../eolivion-logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main>
+<p class="brand"><a href="../"><img src="../eolivion-logo.svg" alt="" width="28" height="28"> Eolivion</a></p>
+
+<h1>Velocity Chart &amp; Sprint Report for Jira Dashboards</h1>
+<p class="meta">Getting started</p>
+
+<p>Velocity Chart &amp; Sprint Report is a widget for the new Jira dashboards. It shows committed and completed for each sprint of a Scrum board, with the average, and opens any sprint's report right on the dashboard. It runs inside Jira and makes no calls to outside servers.</p>
+
+<h2>Add the widget</h2>
+<ol>
+<li>Open a dashboard and choose <strong>Edit</strong>, then <strong>Add widget</strong>.</li>
+<li>Search for <strong>Velocity</strong> and add <strong>Velocity Chart &amp; Sprint Report</strong>.</li>
+<li>Pick a Scrum board in its settings, check the preview beside them and choose <strong>Add</strong>.</li>
+</ol>
+<p>The first time, Jira asks you to allow the app to read Jira on your behalf. It only reads: boards, sprints and work items.</p>
+<p>The widget is available on the new Jira dashboards. It isn't offered as a gadget on classic dashboards.</p>
+
+<h2>Settings</h2>
+<ul>
+<li><strong>Scrum board</strong>: the board whose sprints you want to see. Velocity needs sprints, so only Scrum boards are listed.</li>
+<li><strong>Sprints</strong>: the last 6, 12, 18 or 24 closed sprints, or every closed sprint on the board. Jira's own velocity chart stops at 12.</li>
+<li><strong>Show the active sprint too</strong>: adds the sprint in progress at the right. It's left out of the average.</li>
+</ul>
+
+<h2>Read the chart</h2>
+<p>Each sprint has two bars. <strong>Committed</strong> is what was in the sprint when it started, with the estimates it had then. <strong>Completed</strong> is what was done when it closed. The dashed line is the average completed across the closed sprints shown.</p>
+<p>The numbers use the board's estimate (story points, time or issue count) and come from Jira's own sprint report, counted the same way as Jira's velocity chart.</p>
+
+<h2>Open a sprint's report</h2>
+<p>Click a sprint to see its report below the chart: completed, not completed, removed from the sprint and completed in another sprint, each with its estimate. A <strong>+</strong> marks work items added after the sprint started, which is why they aren't in the committed total. Click a key to open the work item in Jira.</p>
+
+<h2>Who sees what</h2>
+<p>The widget reads the board and its sprints as the person looking at the dashboard. Everyone sees only the boards and work items they can already open in Jira.</p>
+
+<h2>Need help?</h2>
+<p>Open a request on the <a href="https://eolivion.atlassian.net/servicedesk/customer/portal/1">support portal</a> or write to <a href="mailto:support@eolivion.com">support@eolivion.com</a>.</p>
+</main>
+</body>
+</html>
