@@ -56,6 +56,14 @@
 <h2>On a dashboard</h2>
 <p>Add the <strong>Time in Status and SLA</strong> gadget to a dashboard. In its settings, write the project key (for its statuses and SLA goals), the JQL and, if you want, where cycle time starts and ends. The gadget keeps its last result in your browser for an hour so the dashboard opens quickly, and <strong>Update</strong> recalculates it.</p>
 <p>It works on both kinds of Jira dashboard. On the new dashboards, choose <strong>Edit</strong>, then <strong>Add widget</strong>, search for <strong>Time in Status</strong> and fill in the same settings; the preview beside them updates as you type. On classic dashboards it's in <strong>Add gadget</strong>.</p>
+<p>On the new dashboards the widget can also show flow metrics. Pick one in <strong>Show</strong>, and for the charts pick the period, from the last 14 to the last 90 days:</p>
+<ul>
+<li><strong>Cumulative flow diagram:</strong> how many work items were in each status on each day, with done at the bottom.</li>
+<li><strong>Throughput per week:</strong> how many work items reached a done status each week. One that's reopened and finished again counts in the week it finished last.</li>
+<li><strong>Cycle time scatter:</strong> one dot per finished work item, with the 85th percentile line. It needs where cycle time starts and ends.</li>
+<li><strong>Age of open work items:</strong> the 10 oldest work items that have started and aren't done, and how long each has been in its current status.</li>
+</ul>
+<p>They're all worked out from the same status history as the report, for the work items your JQL finds. A cumulative flow diagram only shows the work items the JQL returns, so if it uses <code>updated &gt;= -90d</code>, work finished long ago and never touched since won't be in the done band.</p>
 
 <h2>Need help?</h2>
 <p>Open a request on the <a href="https://eolivion.atlassian.net/servicedesk/customer/portal/1">support portal</a> or write to <a href="mailto:support@eolivion.com">support@eolivion.com</a>.</p>

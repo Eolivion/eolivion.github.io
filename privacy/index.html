@@ -12,39 +12,18 @@
 <p class="brand"><a href="../"><img src="../eolivion-logo.svg" alt="" width="28" height="28"> Eolivion</a></p>
 
 <h1>Privacy Policy</h1>
-<p class="meta">Last updated: November 16, 2026</p>
+<p class="meta">Last updated: November 22, 2026</p>
 
-<p>This policy covers the apps Eolivion builds for Atlassian Cloud: <strong>Issues by Team for Jira Dashboards</strong>, <strong>Scrum Poker by Eolivion (and its free edition, Scrum Poker Free by Eolivion)</strong>, <strong>Scrum Retro by Eolivion (and its free edition, Scrum Retro Free by Eolivion)</strong>, <strong>Issue and Work Item Templates by Eolivion</strong> <strong>Time in Status, Cycle Time and Lead Time by Eolivion</strong>, <strong>Epic Progress &amp; Hierarchy Tree for Jira Dashboards</strong> and <strong>Velocity Chart &amp; Sprint Report for Jira Dashboards</strong>. The sections below about "the app" describe Issues by Team; Scrum Poker, Scrum Retro, Issue and Work Item Templates, Time in Status, Epic Progress and Velocity Chart have their own sections, because they store a little more.</p>
+<p>This policy covers the apps Eolivion builds for Atlassian Cloud: <strong>Scrum Poker by Eolivion (and its free edition, Scrum Poker Free by Eolivion)</strong>, <strong>Scrum Retro by Eolivion (and its free edition, Scrum Retro Free by Eolivion)</strong>, <strong>Issue and Work Item Templates by Eolivion</strong>, <strong>Time in Status, Cycle Time and Lead Time by Eolivion</strong>, <strong>Epic Progress &amp; Hierarchy Tree for Jira Dashboards</strong> and <strong>Velocity Chart &amp; Sprint Report for Jira Dashboards</strong>. Each app has its own section below, because each one keeps different things.</p>
 
 <h2>The short version</h2>
-<p>The app reads your Jira data to draw a chart, inside Atlassian's own infrastructure, with your own permissions. Eolivion doesn't receive, store or sell any of it. There are no Eolivion servers involved.</p>
+<p>The apps read your Jira data inside Atlassian's own infrastructure, with your own permissions. Eolivion doesn't receive, store or sell any of it. There are no Eolivion servers involved.</p>
 
-<h2>What the app reads</h2>
-<p>When someone views the gadget, the app asks Jira, on behalf of that person:</p>
-<ul>
-<li>the list of Teams on the site (id and name), for the chart's slices</li>
-<li>issue counts for the filter or project picked in the gadget's settings</li>
-<li>the names of saved filters and projects, only while someone is choosing one in the settings</li>
-</ul>
-<p>These requests use the viewer's own Jira permissions. The app can't see anything that person can't already see.</p>
-
-<h2>What the app stores</h2>
-<div class="table">
-<table>
-<thead><tr><th>What</th><th>Where</th><th>Why</th></tr></thead>
-<tbody>
-<tr><td>The gadget's settings (chosen filters or projects, sub-task option, date field for periods)</td><td>Jira, as the gadget's configuration</td><td>so the gadget shows the same thing next time</td></tr>
-<tr><td>The last tab and period each person picked</td><td>that person's browser (local storage)</td><td>so the gadget opens where they left it</td></tr>
-</tbody>
-</table>
-</div>
-<p>Nothing else is stored. The app doesn't keep copies of issues, team names, counts or user details.</p>
-
-<h2>Where the app runs</h2>
-<p>The app is built on Atlassian Forge and runs entirely on Atlassian's platform. It makes <strong>no requests to any server outside Atlassian</strong>. Your data stays where your Jira data already is, under Atlassian's hosting, data residency and security commitments.</p>
+<h2>Where the apps run</h2>
+<p>Every app is built on Atlassian Forge and runs entirely on Atlassian's platform. They make <strong>no requests to any server outside Atlassian</strong>. Your data stays where your Jira data already is, under Atlassian's hosting, data residency and security commitments. When an app asks Jira for data, it uses the permissions of the person using it, so it can't see anything that person can't already see.</p>
 
 <h2>Scrum Poker by Eolivion</h2>
-<p>Scrum Poker runs entirely on Atlassian's platform too, makes no requests outside Atlassian, and Eolivion can't see its data. Unlike Issues by Team, it keeps some data so a session works for everyone in it.</p>
+<p>Scrum Poker runs entirely on Atlassian's platform too, makes no requests outside Atlassian, and Eolivion can't see its data. It keeps some data so a session works for everyone in it.</p>
 <div class="table">
 <table>
 <thead><tr><th>What</th><th>Why</th><th>Until</th></tr></thead>
@@ -118,7 +97,7 @@
 
 <h2>Velocity Chart &amp; Sprint Report for Jira Dashboards</h2>
 <p>Velocity Chart runs entirely on Atlassian's platform, makes no requests outside Atlassian, and Eolivion can't see its data. It reads a board, its sprints and their sprint reports when someone opens a dashboard with the widget, with that person's own Jira permissions, and doesn't keep the results. It stores nothing of its own: the widget's settings (title, board and how many sprints) are saved by Jira with the dashboard.</p>
-<p>All of this lives in Atlassian Forge storage, on Atlassian's infrastructure. None of it identifies a person. The report results, including work item keys, summaries and assignee names, are calculated in the browser of the person running the report and aren't stored anywhere. The dashboard gadget keeps its last summary (counts and times, no work item details) in that person's browser for up to an hour.</p>
+<p>All of this lives in Atlassian Forge storage, on Atlassian's infrastructure. None of it identifies a person. The report results, including work item keys, summaries and assignee names, are calculated in the browser of the person running the report and aren't stored anywhere. The dashboard gadget and widget keep their last summary in that person's browser for up to an hour: counts and times and, in the view of open work items by age, the key, summary and status of up to 10 work items.</p>
 
 <h2>What Eolivion receives</h2>
 <p>When the app is installed, Atlassian shares licensing and contact details about the customer who installs the app (for example, the site name and a billing or technical contact). Eolivion uses these only to manage the license and to answer support requests.</p>
